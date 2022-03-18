@@ -10,7 +10,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { makeStyles } from '@mui/styles';
 import Alert from '@mui/material/Alert';
 import './Login.css'
-import insta from '../Assets/Instagram.jfif'
+import insta from '../Assets/Instagram.svg'
 import TextField from '@mui/material/TextField';
 import {Link} from  'react-router-dom';
 import bg from '../Assets/insta.png'
@@ -82,7 +82,7 @@ export default function Login() {
                     <Slide index={0}><Image src={img1}/></Slide>
                     <Slide index={1}><Image src={img2}/></Slide>
                     <Slide index={2}><Image src={img3}/></Slide>
-                    <Slide index={3}><Image src={img4}/></Slide>
+                    <Slide index={2}><Image src={img4}/></Slide>
                     <Slide index={4}><Image src={img5}/></Slide>
                     </Slider>
                 </CarouselProvider>
@@ -91,7 +91,8 @@ export default function Login() {
           <div className="loginCard">
             <Card variant="outlined">
                 <div className="insta-logo">
-                    <img src={insta} alt="" />
+                    <img src={insta} alt='ista'/>
+                    <h1>Mobius</h1>
                 </div>
                 <CardContent>
                     {error!='' && <Alert severity="error">{error}</Alert>}

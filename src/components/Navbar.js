@@ -20,7 +20,7 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {useNavigate} from 'react-router-dom';
 import {AuthContext} from '../Context/AuthContext'
 import {makeStyles} from '@mui/styles';
-import insta from '../Assets/Instagram.jfif';
+import insta from '../Assets/Instagram.svg';
 import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Avatar from '@mui/material/Avatar';

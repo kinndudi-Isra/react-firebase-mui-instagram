@@ -8,7 +8,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Alert from '@mui/material/Alert';
 import './SignUp.css'
-import insta from '../Assets/Instagram.jfif'
+import insta from '../Assets/Instagram.svg'
 import TextField from '@mui/material/TextField';
 import {Link,useNavigate} from  'react-router-dom';
 import { AuthContext } from '../Context/AuthContext';

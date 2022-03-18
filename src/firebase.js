@@ -1,33 +1,22 @@
-// Import the functions you need from the SDKs you need
-//import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
-import "firebase/compat/storage";
-import "firebase/compat/firestore";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { getAnalytics } from "firebase/analytics";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyDw4iLp7KAUsDetyo0aTdYmHmR4DgFMXHs",
+  authDomain: "instagram-clone-28771.firebaseapp.com",
+  projectId: "instagram-clone-28771",
+  storageBucket: "instagram-clone-28771.appspot.com",
+  messagingSenderId: "111989369370",
+  appId: "1:111989369370:web:45754427e792b855c8bfa3",
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-export const auth = firebase.auth();
-const firestore = firebase.firestore();
-export const database = {
-  users: firestore.collection("users"),
-  posts: firestore.collection("posts"),
-  comments: firestore.collection("comments"),
-  getTimeStamp: firebase.firestore.FieldValue.serverTimestamp,
-};
-export const storage = firebase.storage();
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
+const analytics = getAnalytics(app);
+export { firestore, auth, storage, analytics };
